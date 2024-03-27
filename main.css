@@ -80,6 +80,7 @@ body {
   font-weight: var(--fw-normal);
   line-height: 1.75;
   color: var(--textColor);
+  padding-block-end: 5rem;
 }
 
 p {
@@ -259,7 +260,8 @@ ul {
 }
 
 .wrapper {
-  max-width: 1100px;
+  padding-inline: 2rem;
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -270,4 +272,69 @@ ul {
 header {
   text-align: center;
   margin-block: 6rem;
+}
+
+h1 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-900);
+}
+
+h1 span {
+  font-weight: var(--fw-bold);
+}
+
+.layout-grid {
+  --gap: 2rem;
+  display: grid;
+  gap: var(--gap);
+}
+
+@media screen and (min-width: 800px) {
+  .layout-grid {
+    display: flex;
+  }
+}
+
+.layout-grid > * {
+  flex: 1;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  align-self: center;
+}
+
+.card {
+  padding: 2rem;
+  border-top: 0.325rem solid;
+  border-radius: 0.325rem;
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.1);
+}
+
+.card__title {
+  font-size: 1.625rem;
+}
+
+.card__img {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.border-teal {
+  border-color: hsl(180, 62%, 55%);
+}
+
+.border-red {
+  border-color: hsl(0, 78%, 62%);
+}
+
+.border-yellow {
+  border-color: hsl(34, 97%, 64%);
+}
+
+.border-blue {
+  border-color: hsl(212, 86%, 64%);
 }
